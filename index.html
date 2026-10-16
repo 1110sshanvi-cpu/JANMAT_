@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#101b35">
+<title>JANMAT — From Voice to Law</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#" aria-label="JANMAT home" onclick="goHome();return false;"><span class="brand-mark">J</span><span>JANMAT<small>FROM VOICE TO LAW</small></span></a>
+  <div class="top-actions"><span class="simulation-pill"><i></i> CLASSROOM SIMULATION</span><button class="quiet-btn" id="resetBtn" title="Restart simulation">↻ Restart</button></div>
+</header>
+<main id="app" class="shell">
+  <section class="hero screen active" id="homeScreen">
+    <div class="hero-copy">
+      <div class="eyebrow">INSIDE THE INDIAN PARLIAMENT</div>
+      <h1>Every voice<br>can shape <em>tomorrow.</em></h1>
+      <p class="lead">Step into a simplified mock Lok Sabha. Debate a fictional school-zone safety Bill, propose changes, and see how a vote works.</p>
+      <div class="hero-actions"><button class="primary-btn" id="startBtn">Enter Parliament <span>→</span></button><button class="secondary-btn" id="howBtn">How it works</button><button class="secondary-btn" id="exploreBtn">Explore Parliament</button></div>
+      <div class="hero-foot"><span>01 / LEARN</span><span>02 / DEBATE</span><span>03 / DECIDE</span></div>
+    </div>
+    <div class="parliament-art" aria-label="Illustration of a parliamentary chamber">
+      <div class="art-sun"></div><div class="dome"><div class="dome-tip"></div><div class="dome-line"></div></div>
+      <div class="chamber-label">LOK SABHA <span>•</span> MOCK SESSION</div>
+      <div class="chamber">
+        <div class="speaker-desk"></div>
+        <div class="seat-row row1"><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b></div>
+        <div class="seat-row row2"><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b></div>
+        <div class="seat-row row3"><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b></div>
+        <div class="seat-row row4"><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b></div>
+        <div class="speaker-circle">SPEAKER</div>
+      </div>
+      <div class="art-caption"><span class="caption-dot"></span> YOUR SESSION IS READY <span class="caption-line"></span></div>
+    </div>
+  </section>
+  <section class="screen content-screen" id="howScreen">
+    <button class="back-btn" data-back="home">← Home</button>
+    <div class="eyebrow">THE JOURNEY</div><h2>From public concern<br>to a proposed law.</h2>
+    <div class="journey-grid">
+      <article><span class="step-no">01</span><div class="journey-icon">◉</div><h3>Raise an issue</h3><p>A public concern gets attention and may be raised by representatives.</p></article>
+      <article><span class="step-no">02</span><div class="journey-icon">▤</div><h3>Consider a Bill</h3><p>A Bill is a proposal for a new law or a change to an existing law.</p></article>
+      <article><span class="step-no">03</span><div class="journey-icon">↔</div><h3>Debate & decide</h3><p>Members discuss the proposal, consider changes and vote.</p></article>
+      <article><span class="step-no">04</span><div class="journey-icon">⚖</div><h3>What happens next?</h3><p>An ordinary Bill generally must pass both Houses and receive Presidential assent.</p></article>
+    </div>
+    <div class="notice"><strong>Important:</strong> JANMAT is an educational simulation. The steps and vote count are simplified for the exhibition; they are not an official or complete model of parliamentary procedure.</div>
+    <button class="primary-btn" id="howStartBtn">Start the session →</button>
+  </section>
+
+  <section class="screen content-screen" id="exploreScreen">
+    <button class="back-btn" data-back="home">← Home</button>
+    <div class="eyebrow">EXPLORE PARLIAMENT</div><h2>Understand the institution behind the debate.</h2>
+    <p class="lead narrow">A quick guide to Parliament, selected people who served it, and its regular sessions.</p>
+    <div class="explore-tabs" role="tablist" aria-label="Explore Parliament topics">
+      <button class="explore-tab active" data-topic="parliamentTopic" role="tab" aria-selected="true">What is Parliament?</button>
+      <button class="explore-tab" data-topic="peopleTopic" role="tab" aria-selected="false">People of Parliament</button>
+      <button class="explore-tab" data-topic="sessionsTopic" role="tab" aria-selected="false">Sessions</button>
+    </div>
+    <article class="explore-topic active" id="parliamentTopic">
+      <div class="topic-banner"><span class="topic-symbol">🏛️</span><div><span class="mini-label">ARTICLE 79 • CONSTITUTION OF INDIA</span><h3>India's Parliament</h3><p>Parliament is the Union's central legislative institution.</p></div></div>
+      <div class="two-col topic-cards"><article class="info-card"><span class="tag green">HOUSE OF THE PEOPLE</span><h3>Lok Sabha</h3><p>Members are directly elected by citizens in general elections. It represents people across India's constituencies.</p></article><article class="info-card"><span class="tag gold">COUNCIL OF STATES</span><h3>Rajya Sabha</h3><p>It represents the States and Union Territories. Most members are elected indirectly; some are nominated by the President.</p></article></div>
+      <h3 class="topic-heading">What does Parliament do?</h3><ul class="fact-list"><li><b>Makes laws:</b> considers and debates Bills under the relevant procedure.</li><li><b>Discusses national issues:</b> provides a forum for public concerns and policy debate.</li><li><b>Checks the government:</b> members ask questions and scrutinise government actions.</li><li><b>Considers public finances:</b> Parliament examines taxation and government expenditure.</li></ul>
+    </article>
+    <article class="explore-topic" id="peopleTopic">
+      <div class="topic-banner"><span class="topic-symbol">👥</span><div><span class="mini-label">SELECTED HISTORICAL FIGURES</span><h3>People who served Parliament</h3><p>A few notable examples—not a complete list of former MPs or Speakers.</p></div></div>
+      <div class="people-grid">
+        <article class="person-card"><span class="person-initial">ABV</span><div><h3>Atal Bihari Vajpayee</h3><p>Former Lok Sabha MP and Prime Minister; known for parliamentary speeches and public leadership.</p></div></article>
+        <article class="person-card"><span class="person-initial">MS</span><div><h3>Dr Manmohan Singh</h3><p>Former Rajya Sabha member and Prime Minister from 2004 to 2014.</p></div></article>
+        <article class="person-card"><span class="person-initial">SC</span><div><h3>Somnath Chatterjee</h3><p>Speaker of the Lok Sabha from 2004 to 2009.</p></div></article>
+        <article class="person-card"><span class="person-initial">MK</span><div><h3>Meira Kumar</h3><p>Speaker of the Lok Sabha from 2009 to 2014; the first woman to hold the office.</p></div></article>
+        <article class="person-card"><span class="person-initial">SS</span><div><h3>Sushma Swaraj</h3><p>Former Lok Sabha MP and Minister of External Affairs from 2014 to 2019.</p></div></article>
+        <article class="person-card"><span class="person-initial">BJ</span><div><h3>Bal Ram Jakhar</h3><p>Speaker of the Lok Sabha from 1980 to 1989.</p></div></article>
+      </div>
+      <p class="hint">Profiles are short educational summaries. Dates and roles should be checked against official Parliament biographies before display.</p>
+    </article>
+    <article class="explore-topic" id="sessionsTopic">
+      <div class="topic-banner"><span class="topic-symbol">🗓️</span><div><span class="mini-label">PARLIAMENTARY CALENDAR</span><h3>Three commonly known sessions</h3><p>Parliament meets in sessions; exact dates and schedules can change each year.</p></div></div>
+      <div class="session-list">
+        <article class="session-card"><div class="session-month">FEB–MAY<br><small>USUAL PERIOD</small></div><div><h3>Budget Session</h3><p>Centres on the Union Budget and financial business, alongside legislative work and discussions.</p></div></article>
+        <article class="session-card"><div class="session-month">JUL–AUG<br><small>USUAL PERIOD</small></div><div><h3>Monsoon Session</h3><p>Members debate current issues, consider Bills and conduct other parliamentary business.</p></div></article>
+        <article class="session-card"><div class="session-month">NOV–DEC<br><small>USUAL PERIOD</small></div><div><h3>Winter Session</h3><p>Provides another period for debates, legislation, questions and scrutiny of government work.</p></div></article>
+      </div>
+      <div class="notice"><strong>Constitutional rule:</strong> The Constitution says six months must not intervene between the last sitting of one session and the first sitting of the next. These months are typical, not guaranteed dates.</div>
+    </article>
+    <div class="source-box"><strong>Explore official sources</strong><p>Use Parliament's official website and the Constitution of India for further reading.</p><div class="source-links"><a href="https://sansad.in/" target="_blank" rel="noopener noreferrer">Parliament of India ↗</a><a href="https://www.indiacode.nic.in/" target="_blank" rel="noopener noreferrer">India Code ↗</a></div></div>
+    <button class="primary-btn" id="exploreStartBtn">Try the mock Parliament →</button>
+  </section>
+
+  <section class="screen content-screen" id="issueScreen">
+    <div class="progress-head"><span>YOUR SESSION</span><span>STEP 1 OF 4</span></div><div class="progress-track"><span style="width:25%"></span></div>
+    <div class="eyebrow">01 / PUBLIC CONCERN</div><h2>What should we solve?</h2>
+    <p class="lead narrow">Imagine students and families are concerned about traffic near school gates. Explore the issue before the House begins.</p>
+    <div class="issue-card"><div class="issue-icon">🚸</div><div><span class="mini-label">PUBLIC PETITION • FICTIONAL SCENARIO</span><h3>Safer streets around schools</h3><p>Traffic moves quickly near school entrances. Families want safer crossings, clearer signs and better enforcement.</p></div></div>
+    <div class="two-col">
+      <article class="info-card"><span class="tag green">THE CONCERN</span><h3>Why it matters</h3><p>Children and pedestrians need safer ways to cross roads near school entrances.</p></article>
+      <article class="info-card"><span class="tag gold">THE CHALLENGE</span><h3>What must be balanced?</h3><p>Safety, practical enforcement, costs and the needs of local communities.</p></article>
+    </div>
+    <div class="field-block"><label for="roleSelect">Choose your role for this simulation</label><select id="roleSelect"><option value="member">Member of Parliament (MP)</option><option value="treasury">Treasury Bench MP</option><option value="opposition">Opposition MP</option><option value="speaker">Speaker (guides the session)</option></select><p class="hint">You can try different roles when you replay the session.</p></div>
+    <button class="primary-btn" id="issueNextBtn">Review the proposed Bill →</button>
+  </section>
+  <section class="screen content-screen" id="billScreen">
+    <div class="progress-head"><span>YOUR SESSION</span><span>STEP 2 OF 4</span></div><div class="progress-track"><span style="width:50%"></span></div>
+    <div class="eyebrow">02 / THE PROPOSED BILL</div><h2>Build a safer-school Bill.</h2>
+    <p class="lead narrow">This fictional proposal contains possible measures. Select the changes you think should be included before the debate.</p>
+    <div class="bill-banner"><div class="bill-stamp">DRAFT<br>01</div><div><span class="mini-label">FICTIONAL PROPOSAL</span><h3>School-Zone Safety Bill</h3><p>A proposed set of measures intended to improve safety around school entrances.</p></div></div>
+    <div class="choice-list">
+      <label class="choice"><input type="checkbox" name="amendment" value="crossings" checked><span class="checkmark"></span><span><strong>Marked pedestrian crossings</strong><small>Improve visibility at designated crossing points.</small></span><span class="choice-num">A</span></label>
+      <label class="choice"><input type="checkbox" name="amendment" value="signs" checked><span class="checkmark"></span><span><strong>Clear school-zone signs</strong><small>Warn drivers that they are approaching a school.</small></span><span class="choice-num">B</span></label>
+      <label class="choice"><input type="checkbox" name="amendment" value="speed"><span class="checkmark"></span><span><strong>Proposed lower speed limits</strong><small>Consider reduced speed limits near school gates, subject to local rules.</small></span><span class="choice-num">C</span></label>
+      <label class="choice"><input type="checkbox" name="amendment" value="guards"><span class="checkmark"></span><span><strong>Crossing support at busy times</strong><small>Explore trained crossing support where needed and feasible.</small></span><span class="choice-num">D</span></label>
+    </div>
+    <div class="bill-footer"><span><b id="selectedCount">2</b> measures selected</span><button class="primary-btn" id="debateBtn">Take it to the House →</button></div>
+  </section>
+  <section class="screen content-screen" id="debateScreen">
+    <div class="progress-head"><span>YOUR SESSION</span><span>STEP 3 OF 4</span></div><div class="progress-track"><span style="width:75%"></span></div>
+    <div class="eyebrow">03 / MOCK LOK SABHA</div><h2>The House will now debate.</h2>
+    <div class="role-banner"><div class="role-avatar" id="roleAvatar">MP</div><div><span class="mini-label">YOUR ASSIGNED ROLE</span><strong id="roleName">Member of Parliament</strong><p id="roleDescription">Consider the public interest and decide how you will vote.</p></div><button class="text-btn" id="changeRoleBtn">Change role</button></div>
+    <div class="debate-layout">
+      <div class="chamber-mini"><div class="mini-chamber-top">MOCK LOK SABHA <span>SESSION 01</span></div><div class="mini-desk"></div><div class="mini-seats"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="mini-speaker">CHAIR / SPEAKER</div></div>
+      <div class="debate-cards">
+        <article class="argument-card support"><span class="tag green">TREASURY BENCH • SUPPORT</span><h3>“Safety needs a plan.”</h3><p>Clear crossings and signs could help protect students. A focused plan may prevent confusion around school gates.</p></article>
+        <article class="argument-card oppose"><span class="tag gold">OPPOSITION • SCRUTINY</span><h3>“How will it work?”</h3><p>Measures need funding, local planning and realistic enforcement. The House should ask who will implement them.</p></article>
+      </div>
+    </div>
+    <div class="decision-box"><div><span class="mini-label">YOUR DECISION</span><h3>What is your position on this Bill?</h3><p>Think about both the public benefit and the practical concerns.</p></div><div class="vote-options"><button class="vote-btn yes" data-vote="for"><span>✓</span><strong>In favour</strong><small>Support the Bill</small></button><button class="vote-btn no" data-vote="against"><span>×</span><strong>Against</strong><small>Do not support it</small></button><button class="vote-btn abstain" data-vote="abstain"><span>—</span><strong>Abstain</strong><small>No vote either way</small></button></div></div>
+    <p class="hint">This is a one-visitor mock vote, not a vote by the real Lok Sabha. The final screen shows an illustrative classroom result.</p>
+  </section>
+  <section class="screen content-screen" id="resultScreen">
+    <div class="eyebrow">04 / SESSION RESULT</div><h2 id="resultHeading">Your vote is recorded.</h2>
+    <p class="lead narrow" id="resultLead">Here's what your decision means in the simulation.</p>
+    <div class="result-panel"><div class="result-top"><div><span class="mini-label">YOUR VOTE</span><h3 id="voteResult">IN FAVOUR</h3></div><div class="result-seal" id="resultSeal">✓</div></div><div class="vote-bars"><div class="bar-row"><span>Illustrative votes in favour</span><strong id="forNum">68</strong></div><div class="bar-track"><span id="forBar" class="bar-for"></span></div><div class="bar-row"><span>Illustrative votes against</span><strong id="againstNum">32</strong></div><div class="bar-track"><span id="againstBar" class="bar-against"></span></div></div><p class="hint">Illustrative numbers only — not actual parliamentary data or a real House tally.</p><div class="outcome" id="outcomeText">In this made-up example, the Bill passes the mock vote.</div></div>
+    <div class="next-steps"><h3>Does passing this vote make it a law?</h3><p><strong>Not by itself.</strong> For an ordinary Bill, the real process generally requires passage by both the Lok Sabha and Rajya Sabha, followed by Presidential assent. Special rules apply to some types of Bills.</p><div class="timeline"><div><b>1</b><span>Lok Sabha</span></div><i></i><div><b>2</b><span>Rajya Sabha</span></div><i></i><div><b>3</b><span>President's assent</span></div></div></div>
+    <div class="learn-box"><div class="learn-icon">✦</div><div><strong>What did you learn?</strong><p>A Bill is a proposal. Debate, scrutiny and voting are parts of the legislative process, but the exact steps depend on the type of Bill.</p></div></div>
+    <div class="result-actions"><button class="primary-btn" id="quizBtn">Test your Parliament knowledge →</button><button class="secondary-btn" id="againBtn">Replay session</button></div>
+  </section>
+  <section class="screen content-screen" id="quizScreen">
+    <div class="eyebrow">KNOWLEDGE CHECK</div><h2>Parliament, understood.</h2><p class="lead narrow">Three quick questions to see what you learned.</p>
+    <div id="quizContainer" class="quiz-container"></div><div class="quiz-footer"><span id="quizProgress">QUESTION 1 OF 3</span><button class="primary-btn" id="quizNextBtn" disabled>Check answer →</button></div>
+    <div id="quizFeedback" class="quiz-feedback" hidden></div>
+    <div class="result-actions"><button class="secondary-btn" id="quizRestartBtn">Restart quiz</button><button class="primary-btn" id="finishBtn">Back to JANMAT home ↗</button></div>
+  </section>
+  <footer class="site-footer"><span>JANMAT © 2026 • STUDENT CIVICS PROJECT</span><span>LEARN • DEBATE • DECIDE</span></footer>
+</main>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="script.js"></script>
+</body>
+</html>
